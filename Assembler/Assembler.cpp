@@ -14,10 +14,8 @@ void Assembler::assemble(string inFile, string outFile) {
 		PassOne(inputFile, line, romAddress);
 		inputFile.clear(); inputFile.seekg(0);
 		PassTwo(inputFile, outputFile, line);
-
-		//Assembler::printMap();
-		inputFile.close();
-		outputFile.close();
+		
+		inputFile.close(); outputFile.close();
 	} 
 	else cerr << "Error in opening file." << endl;
 }
